@@ -49,33 +49,58 @@ public class Main
 		animalList.add(perch);
 
 		System.out.println("***All Animals***\n");
-		animalList.forEach((a) -> System.out.println(a));
+		System.out.println(animalList.toString());
 		System.out.println("\n*****\n");
 
 		//list by year, descending
 		System.out.println("*** List by Year ***");
 		animalList.sort((a1, a2) -> a2.year - a1.year);
 		System.out.println(animalList.toString());
-		
+
 		//list alphabetically
 		System.out.println("*** List by Name ***");
 		animalList.sort((a1, a2) -> a1.name.compareToIgnoreCase(a2.name));
 		System.out.println(animalList.toString());
 
 		//list animals alphabetically by how they move
-		System.out.println();
+		System.out.println("*** List by Movement ***");
+		animalList.sort((a1, a2) -> a1.move().compareToIgnoreCase(a2.move()));
+		System.out.println(animalList.toString());
 
 		//list animals that breathe w/ lungs
-		System.out.println();
+		System.out.println("*** List of Animals That Use Lungs ***");
+		animalList.forEach((a) -> {if(a.breathe().equals("This animal breathes with lungs."))
+		{
+			System.out.println(a.toString());
+		}});
 
 		//list animals that breathe w/ lungs AND year = 1758
-		System.out.println();
+		System.out.println("*** List of Animals That Use Lungs Named in 1758 ***");
+		animalList.forEach((a) -> {if(a.breathe().equals("This animal breathes with lungs."))
+		{
+			if(a.year == 1758)
+			{
+			System.out.println(a.toString());
+			}
+		}});
 
 		//list animals that lay eggs AND breathe w/ lungs
-		System.out.println();
+		System.out.println("*** List of Animals that Lay Eggs and Have Lungs ***");
+		animalList.forEach((a) -> {if(a.reproduce().equals("This animal reproduces via eggs."))
+			{
+			if(a.breathe().equals("This animal breathes with lungs."))
+			{
+			System.out.println(a.toString());
+			}
+		}});
 
 		//list animals named in 1758 AND alphabetically
-		System.out.println();
+		System.out.println("*** List of Animals Named in 1758 by Name ***");
+		animalList.sort((a1, a2) -> a1.name.compareToIgnoreCase(a2.name));
+		animalList.forEach((a) -> {if(a.year == 1758)
+			{
+			System.out.println(a.toString());
+		}});
 
 	}
 }
