@@ -32,7 +32,7 @@ public class Mammal extends Animal
 	@Override
 	public String toString()
 	{
-		return "Mammal{name=" + name + ", year=" + year + "}";
+		return "Mammal{name=" + name + ", year=" + year + "}\n";
 	}
 
 }

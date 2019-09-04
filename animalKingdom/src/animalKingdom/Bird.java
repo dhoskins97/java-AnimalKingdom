@@ -32,7 +32,7 @@ public class Bird extends Animal
 	@Override
 	public String toString()
 	{
-		return "Bird{name=" + name + ", year=" + year + "}";
+		return "Bird{name=" + name + ", year=" + year + "}\n";
 	}
 
 }
