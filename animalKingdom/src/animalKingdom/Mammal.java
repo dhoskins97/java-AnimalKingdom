@@ -6,7 +6,7 @@ public class Mammal extends Animal
 	//constructor
 	public Mammal(String name, int year)
 	{
-		super(name, year)
+		super(name, year);
 	}
 
 	//methods, abtracted in parent class
@@ -32,10 +32,7 @@ public class Mammal extends Animal
 	@Override
 	public String toString()
 	{
-		return "Mammal{" +
-				"name=" name +
-				", year=" + year +
-				"}";
+		return "Mammal{name=" + name + ", year=" + year + "}";
 	}
 
 }

@@ -23,6 +23,8 @@ public class Main
 		Fish salmon = new Fish("Salmon", 1758);
 		Fish catfish = new Fish("Catfish", 1817);
 		Fish perch = new Fish("Perch", 1758);
+
+		System.out.println("Code has compiled and run successfully!!");
 	}
 
 }

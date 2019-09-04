@@ -6,7 +6,7 @@ public class Fish extends Animal
 	//constructor
 	public Fish(String name, int year)
 	{
-		super(name, year)
+		super(name, year);
 	}
 
 	//methods, abtracted in parent class
@@ -32,10 +32,7 @@ public class Fish extends Animal
 	@Override
 	public String toString()
 	{
-		return "Fish{" +
-				"name=" name +
-				", year=" + year +
-				"}";
+		return "Fish{name=" + name + ", year=" + year + "}";
 	}
 
 }
